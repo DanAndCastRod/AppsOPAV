@@ -1,6 +1,4 @@
 function ShowSelected(){
-    var cod = document.getElementById("Tipo-corte").value;
-    
 
     var combo = document.getElementById("Tipo-corte");
     var selected = combo.options[combo.selectedIndex].text;
