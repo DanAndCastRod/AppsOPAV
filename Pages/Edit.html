@@ -58,16 +58,16 @@
       <h3 class="py-2">Rendimiento de corte</h6>
       <div class="mb-2">
         <label for="Tipo-corte" class="form-label">Tipo de corte</label>
-        <select class="form-select form-select-lg" name="Tipo-corte" id="Tipo-corte">
+        <select class="form-select form-select-lg" name="Tipo-corte" id="Tipo-corte" onchange="ShowSelected();">
           <option selected>Seleccione un tipo de corte</option>
-          <option value="">PCR+AP</option>
-          <option value="">PSR+AP</option>
-          <option value="">CCR+AP</option>
-          <option value="">CSR+AP</option>
-          <option value="">PCR+AC</option>
-          <option value="">PSR+AC</option>
-          <option value="">CCR+AC</option>
-          <option value="">CSR+AC</option>
+          <option value="1">PCR+AP</option>
+          <option value="2">PSR+AP</option>
+          <option value="3">CCR+AP</option>
+          <option value="4">CSR+AP</option>
+          <option value="5">PCR+AC</option>
+          <option value="6">PSR+AC</option>
+          <option value="7">CCR+AC</option>
+          <option value="8">CSR+AC</option>
         </select>
 
         <div class="mb-2 py-4">
@@ -77,41 +77,67 @@
        
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3" id = "Pechuga">
           <label for="" class="form-label">Pechuga</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="mb-3">
+        <div class="mb-3" id = "Pernil_1">
           <label for="" class="form-label">Pernil 1</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="mb-3">
+        <div class="mb-3" id = "Pernil_2">
           <label for="" class="form-label">Pernil 2</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Muslo</label>
+        <div class="mb-3" id = "Muslo_1">
+          <label for="" class="form-label">Muslo 1</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Muslo</label>
+        <div class="mb-3" id = "Muslo_2">
+          <label for="" class="form-label">Muslo 2</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Muslo</label>
+        <div class="mb-3" id = "Contra_1">
+          <label for="" class="form-label">Contramuslo 1</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="mb-3">
-          <label for="" class="form-label">Muslo</label>
+        <div class="mb-3" id = "Contra_2">
+          <label for="" class="form-label">Contramuslo 2</label>
           <input type="text"
               class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
         </div>
+        <div class="mb-3" id = "Ala_1">
+          <label for="" class="form-label">Ala 1</label>
+          <input type="text"
+              class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="mb-3" id = "Ala_2">
+          <label for="" class="form-label">Ala 2</label>
+          <input type="text"
+              class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="mb-3" id = "Costillar">
+          <label for="" class="form-label">Costillar</label>
+          <input type="text"
+              class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="mb-3" id = "Rabadilla">
+          <label for="" class="form-label">Rabadilla</label>
+          <input type="text"
+              class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="mb-3" id = "ACC">
+          <label for="" class="form-label">Ala con Costillar</label>
+          <input type="text"
+              class="form-control form-control-lg" name="" id="" aria-describedby="helpId" placeholder="">
+        </div>
+
       </div>
       
       
@@ -129,6 +155,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+  <script src="/Scripts/script.js"></script>
 </body>
 
 </html>
