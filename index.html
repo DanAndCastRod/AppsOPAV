@@ -27,8 +27,8 @@
       user-select: none;
     }
     .icon{
-      width: 18px;
-      height: 18px;
+      width: 32px;
+      height: 32px;
       margin-right: 16px;
     }
     .card-title{
@@ -46,6 +46,23 @@
       justify-content: space-between;
       align-items: center;
     }
+    .poka-yoke{
+      display: flex;
+      gap: 16px;
+      justify-content: end;
+      margin: 16px 0;
+      padding-right: 16px;
+      
+    }
+    .format-circle{
+      width: 24px;
+      height: 24px;
+      padding: 1px;
+      border: 1px solid #9b9b9b;
+      border-radius: 50%;
+      
+
+    }
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -59,36 +76,33 @@
 </head>
 
 
-<body>
+<body onload="pokayoke()">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light absolute-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="Img/logo-grupobios.svg" style="width: 5em;">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../Img/logo-grupobios.svg" style = "width: 5em;">
         </a>
-        <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-          aria-label="Toggle navigation"></button>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav me-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page">Inicio <span
-                  class="visually-hidden">(current)</span></a>
+              <a class="nav-link active" href="/index.html" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Apps</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Reporte</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reporte</a>
               <div class="dropdown-menu" aria-labelledby="dropdownId">
                 <a class="dropdown-item" href="#">PQRS</a>
-                <a class="dropdown-item" href="#">Solutions</a>
+                <a class="dropdown-item" href="#">Soluciones</a>
               </div>
             </li>
           </ul>
           <form class="d-flex my-2 my-lg-0">
-            <input class="form-control me-sm-2" type="text" placeholder="Search">
+            <input class="form-control me-sm-2" type="text" placeholder="Buscar">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
@@ -96,19 +110,56 @@
     </nav>
   </header>
   <main>
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <div class="row">
         
-        <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
+        <main class="container-fluid col-md-7">
           <div class="header-section">
             <h2>Rendimientos de corte</h2>
-            <img src="https://cdn-icons-png.flaticon.com/512/3524/3524384.png" alt="add" class = "icon">
+            <a href="./Pages/Edit.html">
+            
+              <i class="bi bi-plus-square icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#adadad" class="bi bi-plus-square" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+              </i>
+            </a>
           </div>
+
+          <div class="poka-yoke" id = "poka-yoke" >
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+            <div class="format-circle "></div>
+               
+              
+            
+          </div>
+
           <div class="table-responsive">
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush" id = "container-details">
               <li class="list-group-item">
                 
-                <a href = "" class="card   text-white  ">
+                <a href = "./Pages/Details.html" class="card  bg-light text-dark  ">
+                  <div class="card-body">
+                    <div class="card-title">
+                      <h4>SCR</h4>
+                      <div class="date">24/02/2022</div>
+                    </div>
+                    <p class="card-text">Text</p>
+                    <p>Description</p>
+                  </div>
+                </a>
+                
+              </li>
+              <li class="list-group-item ">
+                
+                <a href = "./Pages/Details.html" class="card  bg-light text-dark  ">
                   <div class="card-body">
                     <div class="card-title">
                       <h4>SCR</h4>
@@ -122,7 +173,7 @@
               </li>
               <li class="list-group-item">
                 
-                <a href = "" class="card   text-white  ">
+                <a href = "./Pages/Details.html" class="card  bg-light text-dark  ">
                   <div class="card-body">
                     <div class="card-title">
                       <h4>SCR</h4>
@@ -134,29 +185,7 @@
                 </a>
                 
               </li>
-              <li class="list-group-item">
-                
-                <a href = "" class="card   text-white  ">
-                  <div class="card-body">
-                    <div class="card-title">
-                      <h4>SCR</h4>
-                      <div class="date">24/02/2022</div>
-                    </div>
-                    <p class="card-text">Text</p>
-                    <p>Description</p>
-                  </div>
-                </a>
-                
-              </li>
-              <li class="list-group-item">
-                <div class="card  bg-white">
-                  <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
-                    <p>Description</p>
-                  </div>
-                </div>
-              </li>
+
 
             </ul>
 
@@ -186,7 +215,7 @@
   <script src="./Sidebars · Bootstrap v5.0_files/sidebars.js.descarga"></script>
 
   <script src="./Scripts/script.js"></script>
-  
+  <script src="./Scripts/prueba.js"></script>
 </body>
 
 </html>
